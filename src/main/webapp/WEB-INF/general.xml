@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="common" template="/WEB-INF/layout/classic.jsp">
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+		<put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+		<put-attribute name="navigation" value="/WEB-INF/layout/navigation.jsp" />
+	</definition>
+
+	<definition name="index" extends="common">
+		<put-attribute name="title" value="Cinema" />
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+	</definition>
+
+	<definition extends="common" name="users/allUsers">
+		<put-attribute name="title" value="AllUsers" />
+		<put-attribute name="body" value="/WEB-INF/views/users/allUsers.jsp" />
+	</definition>
+
+	<definition extends="common" name="ratings/allRatings">
+		<put-attribute name="title" value="AllRatings" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/ratings/allRatings.jsp" />
+	</definition>
+
+	<definition extends="common" name="movies/allMovies">
+		<put-attribute name="title" value="AllMovies" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/movies/allMovies.jsp" />
+	</definition>
+
+	<definition extends="common" name="movies/create">
+		<put-attribute name="title" value="Create Movie" />
+		<put-attribute name="body" value="/WEB-INF/views/movies/create.jsp" />
+	</definition>
+
+	<definition extends="common" name="ratings/allRatingsWithDetails">
+		<put-attribute name="title" value="All Ratings 2" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/ratings/allRatingsWithDetails.jsp" />
+	</definition>
+
+	<definition extends="common" name="movies/allMoviesWithoutRatings">
+		<put-attribute name="title" value="All Moives 2" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/movies/allMoviesWithoutRatings.jsp" />
+	</definition>
+	<definition extends="common" name="ratings/allRatingsWithNull">
+		<put-attribute name="title" value="All Ratings With Null" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/ratings/allRatingsWithNull.jsp" />
+	</definition>
+	<definition extends="common" name="ratings/allSorted">
+		<put-attribute name="title" value="All Movies Sorted" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/ratings/allSorted.jsp" />
+	</definition>
+</tiles-definitions>
